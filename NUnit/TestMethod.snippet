@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+            <Title>Test Method</Title>
+            <Shortcut>tm</Shortcut>
+            <Description>Code snippet for a test method with Arrange, Act, Assert</Description>
+            <Author>James Chambers</Author>
+        </Header>
+        <Snippet>
+            <Imports>
+                <Import>
+                    <Namespace>NUnit.Framework</Namespace>
+                </Import>
+            </Imports>
+            <References>
+                <Reference>
+                    <Assembly>nunit.framework.dll</Assembly>
+                </Reference>
+            </References>
+            <Declarations>
+                <Literal>
+                    <ID>MethodName</ID>
+                    <ToolTip>The name of the method under test</ToolTip>
+                    <Default>MethodName</Default>
+                </Literal>
+                <Literal>
+                    <ID>StateUnderTest</ID>
+                    <ToolTip>Specific contditions that lead to expected result</ToolTip>
+                    <Default>Scenario</Default>
+                </Literal>
+                <Literal>
+                    <ID>ExpectedBehavior</ID>
+                    <ToolTip>The expected result of the given state when the method is invoked</ToolTip>
+                    <Default>ExpectedBehavior</Default>
+                </Literal>
+                <Literal Editable="false">
+                    <ID>Test</ID>
+                    <Function>SimpleTypeName(global::NUnit.Framework.Test)</Function>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">
+                <![CDATA[[$Test$]
+                public void $MethodName$_$StateUnderTest$_$ExpectedBehavior$()
+                {
+                    // Arrange
+                    $end$
+
+                    // Act
+
+                    // Assert
+
+                }]]></Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
